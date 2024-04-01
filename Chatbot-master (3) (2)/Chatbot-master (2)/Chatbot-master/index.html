@@ -1,0 +1,128 @@
+<html>
+<head>
+	<title>
+		Simple chat bot
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">	
+	<head>
+		<body onload="openForm()">
+			<div id="popsi" max-width: 300px; padding: 10px; background-color: white; >
+					<script>
+							function openForm() {
+							  document.getElementById("popsi").style.display = "block";
+							}
+							
+							</script>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">						
+					</div>
+					<div class="col-md-6 w3-card-2"style="border:1px solid grey">
+						
+					<!-- <form class="actions "> -->
+						
+						<div class="" id="message" style="padding: 8px">
+							
+						
+						</div>
+						<div class="form-group" >
+							<div class="row " >
+								<div class="col-md-10">
+								<input  type="text" id="myText" class="form-control" placeholder="enter message" name="message" style="margin-top: 0px; ">
+								</div>	
+								<div class="col-md-2">
+								<button onclick="myFunction()"  class="btn btn-default w3-right" style="margin-top: 0px;">Send</button>			
+								</div>
+							</div>
+							
+						</div>
+					<!-- </form> -->
+					</div>
+
+					<div class="col-md-3">
+						
+					</div>
+			</div>
+			</div>
+		</div>
+			<script>
+					function myFunction() {
+					  var x = document.getElementById("myText").value;
+
+					  // document.getElementById("mymessage").innerHTML = x;	
+					  	  var div = document.createElement("div");
+						div.style.width = "250px";
+						div.style.textEmphasisColor = "rgb(0,0,255)"
+						div.style.padding = "10px";
+						div.style.borderRadius="10px";
+						div.style.float="right";
+						div.style.boxShadow="0 4px 8px 0 rgba(0,0,0,0.2)";
+						div.style.margin = "10px";
+						div.style.backgroundColor = "rgb(0,0,200)"				
+						div.innerHTML = x;
+						div.classList.add("w3-right");
+						document.getElementById("message").appendChild(div);			
+					  
+					  switch (x) {
+					  case "hello":
+					    day = "Hi. Welcome to Booban's chatbot. How can i help you?";
+					    break;
+					  case "your name":
+					    day = "Booban here";
+					    break;
+					  case "this?":
+					    day = "This is Booban's chatbot. Here you can chat with me using prompt. I shall get you what you need from me.";
+					    break;
+					  case "ok":
+					    day = "Anything else?";
+					    break;
+					  case "time":
+					    day = getTime;
+					    break;
+					  case 5:
+					    day = "Friday";
+					    break;
+					  case  6:
+					    day = "Saturday";
+					   default:
+					   day ="Didnt get that!"
+					   case "My internet keeps cutting out!":
+					    day = "I understand how frustrating that can be. To help troubleshoot the issue,could you tell me what device you're using and if you've recently made any changes to your network settings?";
+					    break;
+						case "Hello!  I am hungry":
+					    day = "Hi there! Welcome I can definitely help you with placing an order.  However, I can't take payments directly yet.  Would you like me to walk you through our menu or connect you to our website to complete your order?";
+					    break;
+					    case "Weather":
+					    day = "Sure, would you like to know the weather for today or the forecast for the next few days?";
+					    break;
+						case "Thanks!":
+					    day = " You're welcome! Come back and chat anytime.";
+					    break;
+						case "What's a good place to eat around here?":
+					    day = "Hmm, my current database doesn't cover local restaurants yet. However, I can search the web for some highly-rated ones nearby. Would you like to try that?";
+					    break;
+						
+					}
+					  var div = document.createElement("div");
+						div.style.width = "250px";
+						div.style.padding = "10px";
+						div.style.borderRadius="10px";
+						div.style.float="left";
+						div.style.boxShadow="0 4px 8px 0 rgba(0,0,0,0.2)";
+						div.style.margin = "10px";
+						div.style.backgroundColor = "#fff"
+						div.innerHTML = day;
+						day="";
+						div.classList.add("w3-left");
+
+				document.getElementById("message").appendChild(div);
+			
+
+					}
+</script>
+			<script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+			<script type="text/javascript " src="js/bootstrap.min.js"></script>
+
+		</body>
+	</head>
